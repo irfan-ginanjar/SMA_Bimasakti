@@ -11,7 +11,7 @@ include_once("../functions.php");
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Kelola Data Siswa</title>
+    <title>Kelola Data Nilai</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="../assets/css/siswa.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
@@ -39,7 +39,7 @@ include_once("../functions.php");
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="../login.php">Logout</a></li>
+                    <li><a class="dropdown-item" href="#!">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -54,11 +54,11 @@ include_once("../functions.php");
                             <div class="sb-nav-link-icon "><i class="bi bi-speedometer2"></i></div>
                             Dashboard
                         </a>
-                        <a class="nav-link btn btn-color btn-pjg mx-auto my-4" href="searchsiswa.php">
+                        <a class="nav-link btn btn-color btn-pjg mx-auto my-4" href="searchSiswa.html">
                             <div class="sb-nav-link-icon "><i class="bi bi-search"></i></div>
                             Search Siswa
                         </a>
-                        <a class="nav-link btn btn-color btn-pjg mx-auto my-4" href="inputnilai.html">
+                        <a class="nav-link btn btn-color btn-pjg mx-auto my-4" href="inputnilai.php">
                             <div class="sb-nav-link-icon "><i class="bi bi-file-plus"></i></div>
                             Input Nilai
                         </a>
@@ -77,19 +77,19 @@ include_once("../functions.php");
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid bg-light px-4">
-                    <h1 class="mt-4">Kelola Data Siswa</h1>
+                    <h1 class="mt-4">Kelola Data Nilai Siswa</h1>
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
-                            Tabel Data Siswa
+                            Tabel Data Nilai Siswa
                         </div>
                         <div class="card-body">
                             <?php
                         $db = dbConnect();
-                        getdatasiswa();
+                        getdatanilai();
                         ?>
                         </div>
-                        <button type="button" class="btn btn-primary btn-pjg my-3">Tambah Data</button>
+                        <a href="inputnilai.php" type="button" class="btn btn-primary btn-pjg my-3">Tambah Nilai</a>
                         <br>
 
                     </div>
